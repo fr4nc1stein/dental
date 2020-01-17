@@ -17,9 +17,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN gem install bundler
 RUN bundle install
-RUN rake db:create
-RUN rake db:migrate
-RUN rake db:seed
-RUN rake assets:precompile
 
 COPY . /usr/src/app
+
+# RUN gem update --system
+# RUN bundle exec rake db:create
+# RUN bundle exec rake db:migrate
+# RUN bundle exec rake db:seed
+# RUN bundle exec rake assets:precompile
