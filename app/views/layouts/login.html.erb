@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
+    <!--     Fonts and icons     -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+   <!-- CSS Files -->
+  </head>
+  <body class="" align="center">
+  <div class="wrapper" >
+        <%= yield %>
+  </div>
+  </body>
+  <!--   Core JS Files   -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!--  Google Maps Plugin    -->
+  <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE' %>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+      demo.initChartsPages();
+    });
+  </script>
+
+</html>

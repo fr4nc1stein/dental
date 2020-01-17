@@ -24,7 +24,7 @@ services:
       - 6379:6379
   worker: &app_base
     build: .
-    image: hcis
+    image: app
     command: bundle exec sidekiq
     volumes:
       - .:/usr/src/app
